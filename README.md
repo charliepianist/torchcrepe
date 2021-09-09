@@ -206,6 +206,8 @@ pip install pytest
 pytest
 ```
 
+## Training (cl43)
+Note that train-copy.ipynb and train-copy2.ipynb are the only files configured properly for training. Models are defined in model.py. predict_custom.py handles predictions using custom models, and those predictions are saved in out/pitch/cl43. run_crepe and run_crepe_2 handle running predictions, and eval_custom is used for alignment performance (and can also handle running predictions, but it is preferred to run predictions using run_crepe(_2)). data_eval is used for performance on MIR-QBSH and does not require outputs of the model on full audio files.
 
 ## References
 [1] J. W. Kim, J. Salamon, P. Li, and J. P. Bello, “Crepe: A

@@ -668,7 +668,7 @@ def preprocess(audio,
 
     # Default to running all frames in a single batch
     batch_size = total_frames if batch_size is None else batch_size
-
+    
     # Generate batches
     for i in range(0, total_frames, batch_size):
 
@@ -676,7 +676,7 @@ def preprocess(audio,
         start = max(0, i * hop_length)
         end = min(audio.size(1),
                   (i + batch_size - 1) * hop_length + WINDOW_SIZE)
-
+        
         # Chunk
         frames = torch.nn.functional.unfold(
             audio[:, None, None, start:end],
