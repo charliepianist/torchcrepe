@@ -1,4 +1,3 @@
-*.ipynb
 *.egg-info/
 .empty/
 .ipynb_checkpoints/
